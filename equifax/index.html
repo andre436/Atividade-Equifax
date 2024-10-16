@@ -4,87 +4,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ataque à Equifax</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        /* Estilos gerais */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+            background-image: url('background-image.jpg');
+            background-size: cover;
+            background-position: center;
             color: #333;
         }
-
         header {
-            background-color: #333;
-            color: #fff;
-            padding: 1rem;
+            background: rgba(255, 1, 1, 0.8);
+            color: white;
+            padding: 20px 0;
             text-align: center;
         }
-
+        header img {
+            width: 300px;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            border: 2px solid transparent;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: #fff;
+            color: #fc0000;
+            border: 2px solid #ff0000;
+        }
         .container {
-            padding: 1rem;
-            max-width: 1200px;
-            margin: 0 auto;
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
         }
-
-        .section {
-            margin-bottom: 2rem;
+        .chart-container {
+            margin-top: 50px;
+            margin-bottom: 50px;
         }
-
-        h1, h2, h3, h4 {
-            color: #333;
-        }
-
-        p {
-            line-height: 1.6;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 1rem 0;
-        }
-
-        /* Estilos de responsividade */
-        @media (max-width: 768px) {
-            body {
-                font-size: 14px;
-            }
-
-            header {
-                padding: 0.5rem;
-            }
-
-            .container {
-                padding: 0.5rem;
-            }
-
-            h1, h2, h3, h4 {
-                font-size: 1.5rem;
-            }
-        }
-
-        /* Estilos do rodapé */
         footer {
-            background-color: #333;
-            color: #fff;
             text-align: center;
-            padding: 1rem;
+            padding: 20px 0;
+            background: #ff0202;
+            color: white;
             position: relative;
             bottom: 0;
             width: 100%;
+        }
+        .section {
+            margin: 20px 0;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            max-width: 100%;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Ataque à Equifax</h1>
+    <img src="C:\Users\User\Desktop\equifax\img equifax\image-removebg-preview (4).png" alt="Ataque à Equifax">
+    <nav>
+        <a href="#overview">Visão Geral</a>
+        <a href="#documentation">Documentação</a>
+        <a href="#about">Sobre</a>
+        <a href="#data">Dados Vazados</a>
+        <a href="#impact">Impacto Financeiro</a>
+        <a href="#controls">Controle Físico e Lógico</a>
+        <a href="#case-study">Estudo de Caso</a>
+        <a href="#conclusion">Conclusão</a>
+    </nav>
 </header>
 
 <div class="container">
+    <div class="section" id="overview">
+        <h2>Visão Geral do Ataque</h2>
+        <p>Em 2017, a Equifax, uma das maiores agências de crédito dos Estados Unidos, sofreu um ataque cibernético devastador que resultou no vazamento de dados pessoais de aproximadamente 147 milhões de consumidores. Este incidente se tornou um dos maiores e mais impactantes vazamentos de dados da história.</p>
+        <p><strong>Como Ocorreu o Ataque</strong></p>
+        <p>Exploração de Vulnerabilidade: Os hackers exploraram uma vulnerabilidade conhecida no software Apache Struts, uma ferramenta amplamente utilizada pela Equifax para desenvolver aplicativos web. Essa vulnerabilidade, identificada como CVE-2017-5638, permitia a execução remota de código.</p>
+        <p>Falta de Atualização: Apesar de uma atualização de segurança ter sido disponibilizada para corrigir essa vulnerabilidade, a Equifax não a aplicou a tempo, permitindo que os atacantes acessassem seu sistema.</p>
+        <p>Acesso aos Dados: Após a invasão inicial, os hackers conseguiram navegar pela rede da Equifax e acessar uma vasta quantidade de dados sensíveis, incluindo:</p>
+        <ul>
+            <li>Nomes completos</li>
+            <li>Números de Seguro Social</li>
+            <li>Datas de nascimento</li>
+            <li>Endereços</li>
+            <li>Números de cartão de crédito (209 mil registros)</li>
+        </ul>
+        <p><strong>Consequências do Ataque</strong></p>
+        <p>Impacto na Reputação: A Equifax enfrentou um enorme dano à sua reputação. A confiança dos consumidores foi abalada, levando a uma queda nas ações da empresa.</p>
+        <p>Multas e Ações Legais: O ataque resultou em multas significativas e ações judiciais contra a Equifax. Em 2019, a empresa concordou em pagar até 700 milhões de dólares em um acordo que abordava as consequências do vazamento.</p>
+        <p>Aumento da Regulamentação: O incidente também trouxe à tona a necessidade de regulamentações mais rigorosas em relação à segurança de dados, levando a discussões sobre a proteção de informações pessoais e a responsabilidade das empresas.</p>
+        <p>Ações Corretivas: Em resposta ao ataque, a Equifax implementou novas políticas de segurança, investindo em tecnologias para proteger os dados dos consumidores e treinando sua equipe para identificar e responder a ameaças cibernéticas.</p>
+        <p><strong>Lições Aprendidas</strong></p>
+        <ul>
+            <li>Importância da Atualização: O ataque à Equifax enfatiza a necessidade crítica de manter sistemas atualizados e aplicar patches de segurança assim que estiverem disponíveis.</li>
+            <li>Segurança Proativa: As empresas devem adotar uma abordagem proativa para a segurança da informação, implementando monitoramento constante e avaliações de risco.</li>
+            <li>Transparência: A comunicação clara e transparente com os consumidores após um incidente é essencial para restaurar a confiança.</li>
+        </ul>
+    </div>
+
+    <div class="section" id="video">
+        <h2>Vídeo sobre o Ataque à Equifax</h2>
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/5xsoZB25zHA" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="section" id="documentation">
+        <h2>Documentação</h2>
+        <h3>Medidas Implementadas pela Equifax Após o Ataque Cibernético de 2017</h3>
+        <p><strong>1. Atualização de Sistemas:</strong> A Equifax implementou atualizações de segurança críticas em seus sistemas, especialmente no software Apache Struts, para corrigir as vulnerabilidades exploradas.</p>
+        <p><strong>2. Reforço na Segurança Cibernética:</strong> A empresa investiu em novas tecnologias de segurança, incluindo ferramentas avançadas de monitoramento e detecção de intrusões, além de realizar uma avaliação e aprimoramento das políticas e protocolos de segurança existentes.</p>
+        <p><strong>3. Treinamento e Conscientização:</strong> A Equifax lançou programas de treinamento para aumentar a conscientização sobre segurança cibernética entre os funcionários, focando em práticas seguras e na identificação de ameaças.</p>
+        <p><strong>4. Monitoramento Contínuo:</strong> Foram implementadas auditorias regulares de segurança para identificar e corrigir vulnerabilidades antes que possam ser exploradas, juntamente com a adoção de soluções de monitoramento contínuo para detectar comportamentos anômalos e possíveis intrusões.</p>
+        <p><strong>5. Comunicado aos Consumidores:</strong> A Equifax notificou os consumidores afetados sobre o vazamento de dados, oferecendo serviços de monitoramento de crédito e identidade gratuitos como parte de sua resposta.</p>
+        <p><strong>6. Melhoria nas Práticas de Governança:</strong> A empresa reorganizou a equipe de segurança da informação, incluindo a nomeação de novos líderes de segurança cibernética, e criou um conselho de segurança cibernética para supervisionar e melhorar continuamente as práticas de segurança.</p>
+        <p><strong>7. Colaboração com Autoridades:</strong> A Equifax colaborou com autoridades regulatórias e governamentais para melhorar a conformidade e compartilhar melhores práticas de segurança.</p>
+        <p>Essas medidas visam não apenas corrigir as falhas que permitiram o ataque, mas também fortalecer a postura de segurança da Equifax no longo prazo. A empresa reconheceu a importância de proteger as informações dos consumidores e a necessidade de uma abordagem proativa à segurança da informação.</p>
+    </div>
+
+    <div class="section" id="about">
+        <h2>Sobre a Equifax</h2>
+        <p>A Equifax é uma das três principais agências de crédito dos EUA, coletando e analisando dados financeiros para ajudar empresas a avaliar a solvência de consumidores. O vazamento de dados não apenas afetou a reputação da empresa, mas também resultou em ações legais e multas significativas.</p>
+    </div>
+
+    <div class="section" id="data">
+        <h2>Tipos de Dados Vazados</h2>
+        <div class="chart-container">
+            <canvas id="dataTypesChart" width="800" height="400"></canvas>
+        </div>
+    </div>
+
+    <div class="section" id="impact">
+        <h2>Impacto Financeiro do Ataque</h2>
+        <div class="chart-container">
+            <canvas id="financialImpactChart" width="800" height="400"></canvas>
+        </div>
+    </div>
+
     <div class="section" id="controls">
         <h2>Controle Físico e Lógico</h2>
 
@@ -93,9 +160,9 @@
         <p>Um firewall físico é um dispositivo que monitora o tráfego de rede e atua como uma barreira entre uma rede interna e a internet. Ele filtra o tráfego para proteger a rede contra acessos não autorizados e ataques cibernéticos.</p>
         <p>Esses dispositivos podem ser usados em grandes empresas para proteger suas infraestruturas críticas.</p>
         <img src="C:\Users\User\Desktop\equifax\img equifax\firewall.jpeg" alt="Exemplo de Firewall Físico">
-
+        
         <h4>Proteção Física (Infraestrutura)</h4>
-        <p>A proteção física de data centers inclui o uso de câmeras, biometria, alarmes e controle de acesso a servidores. Normas como ISO/IEC 27001 estabelecem diretrizes para a segurança da informação e práticas de segurança física em ambientes corporativos.</p>
+A proteção física de data centers inclui o uso de câmeras, biometria, alarmes e controle de acesso a servidores. Normas como ISO/IEC 27001 estabelecem diretrizes para a segurança da informação e práticas de segurança física em ambientes corporativos        <p>.</p>
         <img src="C:\Users\User\Desktop\equifax\img equifax\sistemas de segurança.jpeg" alt="Proteção de Data Center">
 
         <h3>Simulação de Ambiente de Data Center</h3>
@@ -103,7 +170,7 @@
         <img src="C:\Users\User\Desktop\equifax\img equifax\recursos.png" alt="Simulação de Data Center">
 
         <h3>Controle Lógico: Software de Segurança</h3>
-
+        
         <h4>Firewall Lógico</h4>
         <p>Um firewall lógico atua filtrando o tráfego de dados indesejados ou maliciosos. Ele protege as redes internas de acessos não autorizados.</p>
         <p>Diferenças entre firewall de software e hardware incluem sua aplicação e implementação. Exemplos populares de firewalls incluem pfSense e Windows Defender.</p>
@@ -111,7 +178,7 @@
         <h4>Proxy</h4>
         <p>Um proxy funciona como intermediário de tráfego, permitindo que usuários acessem a internet de forma mais segura e anônima. Há diferentes tipos de proxy, como HTTP, HTTPS, e proxy reverso.</p>
         <img src="C:\Users\User\Desktop\equifax\img equifax\proxy.png" alt="Proxy">
-
+        
         <h4>Antivírus</h4>
         <p>Os antivírus detectam e neutralizam ameaças por meio de diferentes métodos, incluindo assinaturas e análise comportamental. A atualização regular é crucial para manter a eficácia dos antivírus.</p>
 
@@ -147,8 +214,81 @@
 </div>
 
 <footer>
-    &copy; 2024 - Ataque à Equifax - Todos os direitos reservados
+    <p>&copy; 2024 Ataque à Equifax - Documentação e Análise</p>
 </footer>
+
+<script>
+    // Gráfico de tipos de dados vazados
+    const ctxDataTypes = document.getElementById('dataTypesChart').getContext('2d');
+    const dataTypesChart = new Chart(ctxDataTypes, {
+        type: 'pie',
+        data: {
+            labels: [
+                'Nomes (147M)',
+                'Números de SS (147M)',
+                'Datas de Nascimento (147M)',
+                'Endereços (147M)',
+                'Cartões de Crédito (209K)'
+            ],
+            datasets: [{
+                label: 'Dados Vazados',
+                data: [40, 30, 15, 10, 5],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.6)',
+                    'rgba(54, 162, 235, 0.6)',
+                    'rgba(255, 206, 86, 0.6)',
+                    'rgba(75, 192, 192, 0.6)',
+                    'rgba(153, 102, 255, 0.6)',
+                ],
+                borderColor: 'rgba(255, 255, 255, 1)',
+                borderWidth: 1,
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Tipos de Dados Vazados'
+                }
+            }
+        }
+    });
+
+    // Gráfico de impacto financeiro
+    const ctxFinancialImpact = document.getElementById('financialImpactChart').getContext('2d');
+    const financialImpactChart = new Chart(ctxFinancialImpact, {
+        type: 'bar',
+        data: {
+            labels: ['Custos Legais', 'Multas', 'Perda de Receita', 'Reputação'],
+            datasets: [{
+                label: 'Impacto Financeiro',
+                data: [70000000, 50000000, 200000000, 100000000],
+                backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1,
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Impacto Financeiro do Ataque'
+                }
+            }
+        }
+    });
+</script>
 
 </body>
 </html>
+# Rodar o servidor
+if __name__ == '__main__':
+    app.run_server(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 8050)))
