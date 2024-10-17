@@ -81,11 +81,61 @@
         <a href="#about">Sobre</a>
         <a href="#data">Dados Vazados</a>
         <a href="#impact">Impacto Financeiro</a>
+        <a href="#Atacantes e Pentesting">Atacantes e Pentesting</a>
         <a href="#controls">Controle Físico e Lógico</a>
          <a href="#cibersegurança">cibersegurança</a>
         <a href="#conclusion">Conclusão</a>
     </nav>
 </header>
+
+    <div class="section" id="attackers">
+    <h2>Atacantes e Pentesting</h2>
+    <p>
+        Os atacantes são indivíduos ou grupos que realizam atividades maliciosas visando comprometer a segurança de sistemas, redes ou dados. Eles podem variar de hackers éticos a cibercriminosos organizados. Compreender o perfil dos atacantes é essencial para desenvolver estratégias eficazes de defesa.
+    </p>
+
+    <h3>Tipos de Atacantes</h3>
+    <ul>
+        <li><strong>Hackers Éticos:</strong> Profissionais que utilizam suas habilidades para identificar e corrigir vulnerabilidades, ajudando as organizações a melhorar sua segurança.</li>
+        <li><strong>Cibercriminosos:</strong> Indivíduos ou grupos que realizam ataques para roubar informações, extorquir dinheiro ou causar danos, muitas vezes agindo em busca de lucro financeiro.</li>
+        <li><strong>Ativistas (Hacktivistas):</strong> Grupos que realizam ataques por motivos políticos ou sociais, buscando chamar a atenção para causas específicas, como direitos humanos ou liberdade de expressão.</li>
+        <li><strong>Atacantes Estatais:</strong> Hackers patrocinados por governos que visam espionagem ou sabotagem de outros estados, muitas vezes utilizando técnicas avançadas e recursos consideráveis.</li>
+    </ul>
+
+    <h3>Pentesting: O Que é e Como Funciona?</h3>
+    <p>
+        O <strong>pentesting</strong> (teste de penetração) é uma prática de segurança que simula ataques cibernéticos em um ambiente controlado. O objetivo é identificar vulnerabilidades que podem ser exploradas por atacantes reais. O pentesting é uma ferramenta valiosa para melhorar a postura de segurança de uma organização.
+    </p>
+
+    <h4>Etapas do Pentesting</h4>
+    <ol>
+        <li><strong>Planejamento e Escopo:</strong> Definição do escopo do teste, incluindo os sistemas a serem testados, as regras de engajamento e os objetivos do pentest.</li>
+        <li><strong>Reconhecimento:</strong> Coleta de informações sobre o alvo, como estrutura de rede, sistemas operacionais e serviços em execução. Isso pode incluir técnicas de engenharia social.</li>
+        <li><strong>Escaneamento:</strong> Uso de ferramentas para identificar portas abertas, serviços disponíveis e possíveis vulnerabilidades. Ferramentas como <em>Nmap</em> são frequentemente usadas nesta fase.</li>
+        <li><strong>Exploração:</strong> Tentativa de explorar as vulnerabilidades identificadas. Isso pode incluir a utilização de exploits conhecidos ou técnicas de phishing.</li>
+        <li><strong>Escalação de Privilégios:</strong> Uma vez dentro do sistema, o pentester tentará obter acesso a contas com privilégios elevados, explorando falhas adicionais.</li>
+        <li><strong>Relato:</strong> Documentação dos resultados do teste, incluindo vulnerabilidades encontradas, acesso obtido e recomendações para mitigação, apresentadas em um relatório claro e conciso.</li>
+    </ol>
+
+    <h3>Exemplo de Ataque Prático</h3>
+    <p>
+        Um exemplo prático de ataque pode ser a exploração de uma vulnerabilidade em um servidor web rodando uma versão desatualizada do <strong>Apache</strong>. Aqui está um cenário passo a passo:
+    </p>
+    
+    <ol>
+        <li><strong>Reconhecimento:</strong> O pentester inicia a fase de reconhecimento utilizando ferramentas como <em>Whois</em> para obter informações sobre o domínio e <em>Nslookup</em> para identificar endereços IP.</li>
+        <li><strong>Escaneamento:</strong> Em seguida, ele usa <em>Nmap</em> para escanear o servidor, identificando portas abertas e serviços em execução. Descobre que o servidor está rodando uma versão vulnerável do Apache.</li>
+        <li><strong>Exploração:</strong> O pentester utiliza um exploit conhecido (por exemplo, um ataque de execução remota de código) específico para a versão vulnerável do Apache, usando o framework <em>Metasploit</em>.</li>
+        <li><strong>Obtenção de Acesso:</strong> Após explorar a vulnerabilidade, ele consegue uma shell reversa no servidor, obtendo acesso ao sistema.</li>
+        <li><strong>Escalação de Privilégios:</strong> O pentester tenta escalar privilégios utilizando técnicas como injeção de scripts ou exploração de configurações inadequadas para obter acesso administrativo.</li>
+        <li><strong>Documentação:</strong> O pentester documenta cada etapa do ataque, as vulnerabilidades exploradas, os dados acessados e recomenda ações corretivas para o cliente, como atualizar o software e implementar medidas de segurança adicionais.</li>
+    </ol>
+
+    <p>
+        O pentesting não só ajuda as organizações a identificar e corrigir falhas em seus sistemas, mas também fornece uma visão valiosa sobre a mentalidade e as técnicas utilizadas pelos atacantes. Com essa compreensão, as empresas podem fortalecer suas defesas e proteger melhor seus ativos.
+    </p>
+</div>
+
 <div class="section" id="ciberseguranca">
     <h2>O que é Cibersegurança?</h2>
     <p>
